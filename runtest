@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+gcc -o wc wc.c
+
+[ "`./wc test1`" = "`wc test1`" ]
+[ "`./wc test2`" = "`wc test2`" ]
+[ "`./wc test1 test2`" = "`wc test1 test2`" ]
+echo Done
